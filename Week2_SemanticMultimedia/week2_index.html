@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JD WebWorks | Week 2 HTML Lab</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background: #f4f7fa;
+            color: #1E3A5F;
+            line-height: 1.7;
+        }
+
+        header {
+            background: #1E3A5F;
+            color: white;
+            padding: 24px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin-bottom: 12px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 8px;
+            transition: background 0.2s ease, transform 0.2s ease;
+        }
+
+        nav a:hover {
+            background: #4EA5D9;
+            transform: translateY(-2px);
+        }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        section {
+            background: white;
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(30, 58, 95, 0.10);
+        }
+
+        h2 {
+            margin-bottom: 12px;
+        }
+
+        figure {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        figure img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        figcaption {
+            margin-top: 8px;
+            color: #4f6478;
+            font-size: 14px;
+        }
+
+        video {
+            display: block;
+            width: 100%;
+            max-width: 700px;
+            margin: 20px auto 0;
+            border-radius: 10px;
+        }
+
+        footer {
+            background: #1E3A5F;
+            color: #dceeff;
+            text-align: center;
+            padding: 16px;
+        }
+
+        @media (max-width: 600px) {
+            section {
+                padding: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>JD WebWorks</h1>
+        <p>Week 2 — Semantic &amp; Multimedia</p>
+
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#multimedia">Multimedia</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>About HTML5</h2>
+            <p>HTML5 introduces semantic elements and multimedia integration, making web pages more accessible and structured.</p>
+        </section>
+
+        <section id="multimedia">
+            <h2>Multimedia Features</h2>
+
+            <figure>
+                <img src="image1.jpg" width="200" height="200" alt="Placeholder Image">
+                <figcaption>Figure 1: Placeholder image demonstrating multimedia.</figcaption>
+            </figure>
+
+            <video controls>
+                <source src="video1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+    </main>
+
+    <footer>
+        <p>Created by Joevan Dave Burce BSIS 2A | &copy; 2026 JD WebWorks</p>
+    </footer>
+</body>
+</html>
