@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en"><head><title>JD WebWorks | User Preferences</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>>
+:root{--primary:#1e3a5f;--secondary:#4ea5d9;--bg:#f4f7fb;--text:#1e293b}
+body{font-family:'Poppins',Arial,sans-serif;background:var(--bg);color:var(--text);min-height:100vh}
+.navbar{background:var(--primary)!important}.navbar-brand{font-weight:700;letter-spacing:1px}
+.nav-link{font-weight:500}.nav-link:hover{color:#8fd0f5!important}
+.page-hero{background:linear-gradient(135deg,var(--primary),var(--secondary));color:white;padding:55px 0}
+.content-card{background:white;border:0;border-radius:14px;box-shadow:0 6px 18px rgba(30,58,95,.10)}
+.btn-jd{background:var(--primary);color:#fff;border:0}.btn-jd:hover{background:var(--secondary);color:#fff}
+.result-box{background:#eef7fc;border-left:5px solid var(--secondary);border-radius:10px;padding:18px;min-height:70px}
+footer{background:var(--primary);color:#fff;margin-top:50px}
+footer a{color:#fff;text-decoration:none}footer a:hover{color:#8fd0f5}
+input,select{border-radius:8px!important}
+<body.dark-mode{background:#111827;color:#fff}body.dark-mode .content-card{background:#1f2937;color:#fff}body.dark-mode .form-select{background:#374151;color:#fff;border-color:#64748b}</style>
+</head><body>
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+<div class="container">
+<a class="navbar-brand" href="index.html">JD WebWorks</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="mainNavigation">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="local_storage.html">Local Storage</a></li>
+<li class="nav-item"><a class="nav-link" href="user_preferences.html">Preferences</a></li>
+<li class="nav-item"><a class="nav-link" href="weather_api.html">Weather API</a></li>
+<li class="nav-item"><a class="nav-link" href="github_api.html">GitHub API</a></li>
+</ul></div></div></nav>
+
+<section class="page-hero"><div class="container"><h1 class="fw-bold">User Preferences</h1><p class="lead mb-0">Choose and save your preferred theme and language.</p></div></section>
+<main class="container py-5"><div class="content-card p-4 mx-auto" style="max-width:650px">
+<div class="mb-3"><label for="theme" class="form-label fw-semibold">Theme:</label><select id="theme" class="form-select"><option value="light">Light Mode</option><option value="dark">Dark Mode</option></select></div>
+<div class="mb-3"><label for="language" class="form-label fw-semibold">Language:</label><select id="language" class="form-select"><option value="en">English</option><option value="es">Spanish</option></select></div>
+<button onclick="savePreferences()" class="btn btn-jd">Save Preferences</button><p id="message" class="mt-3"></p></div></main>
+<footer class="py-4">
+<div class="container text-center">
+<p class="mb-1">&copy; 2026 JD WebWorks | Burce Joevan Dave | BSIS 2A</p>
+<small>Web Systems and Technologies Laboratory</small>
+</div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+function savePreferences(){let theme=document.getElementById("theme").value;let language=document.getElementById("language").value;localStorage.setItem("theme",theme);localStorage.setItem("language",language);applyPreferences();document.getElementById("message").innerText="Preferences Saved!";}
+function applyPreferences(){let savedTheme=localStorage.getItem("theme");let savedLanguage=localStorage.getItem("language");if(savedTheme==="dark"){document.body.classList.add("dark-mode");}else{document.body.classList.remove("dark-mode");}document.getElementById("theme").value=savedTheme||"light";document.getElementById("language").value=savedLanguage||"en";}
+applyPreferences();
+</script></body></html>
