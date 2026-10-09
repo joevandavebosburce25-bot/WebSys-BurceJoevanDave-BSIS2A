@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0; padding: 0; line-height: 1.6;
+    background-color: #f4f7fb; color: #1e293b;
+    transition: background-color .3s ease, color .3s ease;
+}
+header {
+    background: linear-gradient(135deg, #1e3a5f, #4ea5d9);
+    color: #fff; padding: 28px 20px 22px; text-align: center;
+    box-shadow: 0 4px 12px rgba(30,58,95,.2);
+}
+.brand-tag { margin: 0 0 4px; font-size: 14px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; }
+header h1 { margin: 0 0 8px; font-size: 30px; }
+#currentTime { margin: 0 0 14px; font-size: 13px; }
+.theme-button, .action-button {
+    background-color: #4ea5d9; color: white; border: none; cursor: pointer;
+    font-family: inherit; font-weight: 600; border-radius: 8px;
+    transition: transform .2s ease, background-color .2s ease;
+}
+.theme-button { padding: 9px 16px; }
+.action-button { padding: 10px 16px; }
+.theme-button:hover, .action-button:hover { background-color: #2f86bd; transform: translateY(-2px); }
+nav ul { list-style: none; padding: 0; margin: 18px 0 0; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+nav ul li a {
+    display: inline-block; color: white; text-decoration: none; padding: 7px 13px;
+    border-radius: 6px; font-weight: 500; transition: background-color .2s ease, transform .2s ease;
+}
+nav ul li a:hover { background-color: rgba(255,255,255,.18); transform: translateY(-2px); }
+main { max-width: 1000px; margin: 0 auto; padding: 28px 20px; }
+.section-card {
+    margin-bottom: 22px; padding: 24px; background-color: #fff;
+    border: 1px solid #d9e2ec; border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(30,58,95,.08);
+}
+.section-card h2 { color: #1e3a5f; margin-top: 0; }
+.task-container { margin-top: 18px; padding: 18px; background-color: #eef7fc; border-left: 5px solid #4ea5d9; border-radius: 8px; }
+.task-container h3 { margin-top: 0; color: #1e3a5f; }
+.task-input-row { display: flex; gap: 10px; flex-wrap: wrap; }
+input { flex: 1; min-width: 200px; padding: 10px 12px; border: 1px solid #cbd5e1; border-radius: 7px; }
+input:focus { outline: 2px solid #4ea5d9; border-color: #4ea5d9; }
+#taskList { padding-left: 20px; margin-bottom: 0; }
+#taskList li { margin: 8px 0; }
+#taskList .removeTask { margin-left: 8px; padding: 5px 9px; background-color: #64748b; color: white; border: none; border-radius: 6px; cursor: pointer; font-family: inherit; }
+#taskList .removeTask:hover { background-color: #475569; }
+form { display: flex; flex-direction: column; }
+form label { margin-bottom: 6px; font-weight: 600; }
+form input { width: 100%; margin-bottom: 12px; }
+form .action-button { width: 100%; }
+.modal {
+    display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%,-50%);
+    width: min(90%,420px); background: white; color: #1e293b; padding: 24px;
+    border-radius: 12px; box-shadow: 0 10px 35px rgba(0,0,0,.3); text-align: center; z-index: 1000;
+}
+.modal-content p { margin-top: 0; font-weight: 600; }
+footer { text-align: center; padding: 18px 10px; background-color: #1e3a5f; color: #fff; }
+footer p { margin: 0; font-size: 13px; }
+body.dark-mode { background-color: #111827; color: #f8fafc; }
+body.dark-mode header { background: linear-gradient(135deg, #172b46, #25658e); }
+body.dark-mode .section-card { background-color: #1f2937; color: #f8fafc; border-color: #374151; }
+body.dark-mode .section-card h2, body.dark-mode .task-container h3 { color: #8fd0f5; }
+body.dark-mode .task-container { background-color: #27384a; border-left-color: #4ea5d9; }
+body.dark-mode input { background-color: #374151; color: white; border-color: #64748b; }
+body.dark-mode input::placeholder { color: #cbd5e1; }
+body.dark-mode .modal { background-color: #f8fafc; color: #1e293b; }
+@media (max-width: 768px) {
+    header { padding: 22px 12px; }
+    header h1 { font-size: 24px; }
+    main { padding: 20px 12px; }
+    .section-card { padding: 18px; }
+    .task-input-row { flex-direction: column; }
+    .task-input-row input, .task-input-row button { width: 100%; }
+}

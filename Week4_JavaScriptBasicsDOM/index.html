@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JD WebWorks | JavaScript & DOM</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <div class="brand">
+            <p class="brand-tag">JD WebWorks</p>
+            <h1>JavaScript &amp; DOM Web Page</h1>
+            <p id="currentTime">Current Time: --:--:-- --</p>
+        </div>
+        <button id="themeToggle" class="theme-button">Switch Theme</button>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="about" class="section-card">
+            <h2>About Us</h2>
+            <p>Welcome to JD WebWorks! This section introduces our company and its values.</p>
+        </section>
+        <section id="services" class="section-card">
+            <h2>Services</h2>
+            <p>We offer a range of services designed to meet your needs.</p>
+            <div class="task-container">
+                <h3>My Tasks</h3>
+                <div class="task-input-row">
+                    <input type="text" id="taskInput" placeholder="Enter a task">
+                    <button id="addTask" class="action-button">Add Task</button>
+                </div>
+                <ul id="taskList"></ul>
+            </div>
+        </section>
+        <section id="contact" class="section-card">
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+                <button type="submit" class="action-button">Submit</button>
+            </form>
+        </section>
+    </main>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <p id="modalMessage"></p>
+            <button id="closeModal" class="action-button">Close</button>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2026 JD WebWorks | Burce Joevan Dave</p>
+    </footer>
+</body>
+</html>
