@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JD WebWorks | Lab 1</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background: #f4f7fa;
+            color: #1E3A5F;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background: #1E3A5F;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 28px;
+        }
+
+        header p {
+            color: #dceeff;
+            margin-top: 4px;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        .card {
+            background: white;
+            max-width: 650px;
+            width: 100%;
+            padding: 40px;
+            text-align: center;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(30, 58, 95, 0.12);
+        }
+
+        .card h2 {
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: #4f6478;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 11px 22px;
+            background: #4EA5D9;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: transform 0.2s ease, background 0.2s ease;
+        }
+
+        .button:hover {
+            background: #1E3A5F;
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background: #1E3A5F;
+            color: #dceeff;
+            text-align: center;
+            padding: 14px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>JD WebWorks</h1>
+        <p>Web Systems and Technologies Portfolio</p>
+    </header>
+
+    <main>
+        <section class="card">
+            <h2>Hello, Web Technologies!</h2>
+            <p>This is a test file created using Visual Studio Code.</p>
+            <a class="button" href="#">Explore My Work</a>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2026 JD WebWorks | Web Systems and Technologies
+    </footer>
+</body>
+</html>
